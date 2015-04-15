@@ -3,14 +3,37 @@
 </head>
 
 <body>
+	<nav>
+		<ul>
+			<li class="menu-item">Accueil</li>
+			<li class="menu-item">Inscription</li>
+			<li class="menu-item">Connexion</li>
+		</ul>
+	</nav>
 	<h1>Bienvenue sur Covoiturage !</h1>
   {{> header}}
+  {{> travellist}}
 </body>
 
 <template name="header">
   <header>
-  <p>retour {{ test }}</p>
-  	<input type="search"><button type="search"></button>
+  <form action="post">
+  	<input type="text" placeholder="Départ">
+  	<input type="text" placeholder="Arrivée">
+  	<input type="date" placeholder="Date">
+  	<input type="submit" value="Go !">
+  </form>
   </header>
-  
+</template>
+
+<template name="travellist">
+	<ul>
+	{{#each covoiturage}}
+		<li class="travel">{{ nom }} {{ prenom }}</li>
+		<li class="travel">{{ nom }} {{ prenom }}</li>
+		<li class="travel">{{ nom }} {{ prenom }}</li>
+		<li class="travel">Trajet 4</li>
+		<li class="travel">Trajet 5</li>
+	{{/each}}
+	</ul>
 </template>
