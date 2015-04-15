@@ -1,7 +1,7 @@
 
-  Template.travellist.helpers({
-    covoiturage: function () {
-      return Covoiturage.find();
-    }
-  });
+  // Template.travellist.helpers({
+  //   covoiturage: function () {
+  //     return Covoiturage.find();
+  //   }
+  // });
 

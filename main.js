@@ -1,13 +1,11 @@
-Covoiturage = new Meteor.Collection('covoiturage');
+covoiturages = new Meteor.Collection('covoiturages');
 
-if(Covoiturage.find().count() <= 0) {
-
-
-Covoiturage.insert({
+if(covoiturages.find().count() <= 0) {
+covoiturages.insert({
 	nom : "nom",
 	prenom : "prenom",
 	age : "age"
-	/*               vehicule : vehicule,
+	/*vehicule : vehicule,
 	identite : identite,
 	photo : photo,
 	nombreAnnoncesPubliees :nombreAnnoncesPubliees,
@@ -24,5 +22,4 @@ Covoiturage.insert({
 	detour : detour,
 	BagagesAutorises : BagagesAutorises*/
 });
-
 }

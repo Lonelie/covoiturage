@@ -1,0 +1,16 @@
+<template name="covoiturages">
+	<ul>
+    {{#each all_covoiturages}}
+		<li><a href="{{ pathFor 'covoiturage' }}">{{ nom }} {{ prenom }} {{ age }}</a></li>
+    {{/each}}
+	</ul>
+
+	<hr/>
+    <div id="form">
+        <div>Ajoutez un nouveau trajet :</div>
+		<input id="nom" type="text" placeholder="Nom"/>
+		<input id="prenom" type="text" placeholder="Prenom"/>
+		<input id="age" type="text" placeholder="Age"/>
+        <button id="submit_covoiturage">Nouveau trajet</button>
+    </div>
+</template>
